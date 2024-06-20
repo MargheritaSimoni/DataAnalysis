@@ -1,7 +1,3 @@
-#Example of how to use it: python3 IstogramComparisonPlot.py --loglog "*.root" ENeutron
-#output in .png file called IstogramsPlotOutput.png as defined inside the cose, can be opened with eog IstogramsPlotOutput.png
-# options: --xlog and --loglog
-
 import glob
 import argparse
 import ROOT
@@ -37,8 +33,8 @@ def main():
     # List to hold open ROOT files
     open_files = []
 
-    # Create a legend
-    legend = ROOT.TLegend(0.1, 0.7, 0.48, 0.9)
+    # Create a legend in the bottom right corner
+    legend = ROOT.TLegend(0.7, 0.1, 0.9, 0.3)
 
     # Loop over files and retrieve histograms
     for file_name in files:
