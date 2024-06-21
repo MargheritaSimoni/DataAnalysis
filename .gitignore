@@ -4,4 +4,4 @@ build/*
 .idea/*
 src/.idea/*
 include/.idea/*
-phantomMaterialIrradiation/*
+phantomMaterialsIrradiation/*
