@@ -1,7 +1,3 @@
-#Example of how to use it: python3 IstogramComparisonPlot.py --loglog "*.root" ENeutron
-#output in .png file called IstogramsPlotOutput.png as defined inside the cose, can be opened with eog IstogramsPlotOutput.png
-# options: --xlog and --loglog
-
 import glob
 import argparse
 import ROOT
@@ -12,6 +8,7 @@ def main():
     parser.add_argument("files_pattern", help="Wildcard pattern to match ROOT files")
     parser.add_argument("hist_name", help="Name of the histogram to plot")
     parser.add_argument("--xlog", action="store_true", help="Plot with x-axis in log scale")
+    parser.add_argument("--ylog", action="store_true", help="Plot with y-axis in log scale")
     parser.add_argument("--loglog", action="store_true", help="Plot with both axes in log scale")
     args = parser.parse_args()
 
@@ -27,7 +24,7 @@ def main():
     # Set log scale if requested
     if args.xlog or args.loglog:
         canvas.SetLogx()
-    if args.loglog:
+    if args.ylog or args.loglog:
         canvas.SetLogy()
 
     # Variable to hold the first histogram for plotting
