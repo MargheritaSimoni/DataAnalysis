@@ -1,3 +1,5 @@
+#INPUT EXAMPLE: python3 IstogramComparisonPlot.py --loglog "*.root" ENeutron	
+#TO OPEN IMAGE: eog IstogramsPlotOutput.png
 import glob
 import argparse
 import ROOT
