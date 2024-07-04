@@ -37,7 +37,7 @@ def main():
     open_files = []
 
     # Create a legend
-    legend = ROOT.TLegend(0.7, 0.1, 0.9, 0.3)
+    legend = ROOT.TLegend(0.7, 0.1, 0.9, 0.3) #0.7 x-coordinate of the lower-left corner of the legend (70% from the left edge of the canvas) 0.1: y-coordinate of the lower-left corner of the legend (10% from the bottom edge of the canvas) 0.9: x-coordinate of the upper-right corner of the legend (90% from the left edge of the canvas) 0.3: y-coordinate of the upper-right corner of the legend (30% from the bottom edge of the canvas)
 
     # Loop over files and retrieve histograms
     for file_name in files:
